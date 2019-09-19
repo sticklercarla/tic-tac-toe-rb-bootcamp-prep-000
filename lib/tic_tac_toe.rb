@@ -76,6 +76,10 @@ def winner(board)
   end
 end
 
+def current_player(board)
+  turn_count(board).even? ? 'X' : 'O'
+end
+
 def play(board)
   turn(board) until over?(board)
   if won?(board)
